@@ -11,5 +11,6 @@ return [
 
   'append_decoded_token' => env('KEYCLOAK_APPEND_DECODED_TOKEN', false),
 
-  'allowed_resources' => env('KEYCLOAK_ALLOWED_RESOURCES', null)
+  'allowed_resources' => env('KEYCLOAK_ALLOWED_RESOURCES', null),
+  'leeway' => env('KEYCLOAK_LEEWAY', 60)
 ];

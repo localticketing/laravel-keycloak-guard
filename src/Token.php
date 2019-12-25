@@ -12,9 +12,10 @@ class Token
    * @param  string  $publicKey
    * @return mixed|null
    */
-  public static function decode(string $token = null, string $publicKey)
+  public static function decode(string $token = null, string $publicKey, $leeway)
   {
     $publicKey = self::buildPublicKey($publicKey);
+    JWT::$leeway = $leeway;
     return $token ? JWT::decode($token, $publicKey, ['RS256']) : null;
   }
 
